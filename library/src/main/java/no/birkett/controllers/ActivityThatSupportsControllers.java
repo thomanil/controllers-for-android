@@ -34,6 +34,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.view.ActionMode;
 import android.view.ContextMenu;
@@ -46,7 +47,7 @@ import android.view.View;
 import android.view.WindowManager;
 
 @SuppressLint("NewApi")
-public abstract class ActivityThatSupportsControllers extends FragmentActivity {
+public abstract class ActivityThatSupportsControllers extends AppCompatActivity {
 
     protected ArrayList<Controller> mControllers;
 
@@ -514,7 +515,7 @@ public abstract class ActivityThatSupportsControllers extends FragmentActivity {
         }
     }
 
-    @Override
+    /*@Override
     public boolean onMenuItemSelected(int featureId, MenuItem item) {
         boolean consumed = super.onMenuItemSelected(featureId, item);
         if (!consumed) {
@@ -526,7 +527,7 @@ public abstract class ActivityThatSupportsControllers extends FragmentActivity {
             }
         }
         return consumed;
-    }
+    }*/
 
     @Override
     public boolean onMenuOpened(int featureId, Menu menu) {
